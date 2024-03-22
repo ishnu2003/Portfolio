@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/v.webp" alt="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student | LifeLong Learner | Developer</p>
+                <h1>Hi,my name is<br> <span>P. Vishnu Vardhan Reddy</span></h1>
+            </div>
+        </div>
+    </div>
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img src="images/pic.webp">
+                </div>
+                <div class="col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Vishnu, a passionate student pursuing a Bachelor of Technology in CSE (AI & ML) at Malla Reddy College of Engineering & Technology. I'm driven by a love for learning and a desire to make an impact through technology. I enjoy exploring new things and challenging myself to grow both personally and professionally.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>WEB DEVELOPMENT</span><br>HTML/ CSS/ JAVA SCRIPT</li>
+                            <li><span>PROGRAMMING LANGUAGES</span><br>C/ JAVA/ Python/ Machine learning</li>
+                            <li><span>DSA</span><br> Dsa in Java</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>Bachelor of Technology in CSE (AI & ML)</span><br>Malla Reddy College of Engineering & Technology (2021 - 2025) ----- CGPA (Current): 8.68</li>
+                            <li><span>Intermediate</span><br>Sri Chaitanya Junior Kalasala (2019 - 2021) ----- Percentage: 95.4</li>
+                            <li><span>SSC (Class 1-10th)</span><br>St.Alphonsus High School ----- GPA: 8.8</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------------------------->
+    <div id="Project">
+        <div class="container">
+          <h1 class="sub-title">Projects</h1>
+          <div class="work-list">
+            <div class="work">
+                <img src="images/quiz.webp">
+                <div class="layer">
+                    <h3>Quiz app based on Python</h3>
+                    <p>This project streamlines contains few interesting questions , offering features like rewards for correct answers and punishment for wrong answers,it is done by python using simple data structures.</p>
+                    <a href="#">link</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ai.webp">
+                <div class="layer">
+                    <h3>ImageNation</h3>
+                    <p>Imagine a web application where you can transform your imagination into captivating visuals with just a few words, Enter the prompt get your image.</p>
+                    <a href="#">link</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ds.webp">
+                <div class="layer">
+                <h3>Deal-Seeker</h3>
+                <p>It is a web extension for instant produvt reviewer and giving us price alerts,it is done using Web Scraping and frontend technologies</p>
+                <a href="#">link</a>
+                </div>
+            </div>
+          </div>  
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact ME</h1>
+                    <p><img src="images/email.webp" alt="mail" width="40" height="40">vish18@gmail.com</p>
+                    <p><img src="images/call.webp" alt="call" width="40" height="40">1231231231</p>
+                    <div class="icons">
+                        <a href="https://www.instagram.com/" title="Instagram"><img src="images/insta.webp" alt="Instagram" width="50" height="40"></a>
+                        <a href="https://www.linkedin.com/" title="LinkedIn"><img src="images/link.webp" alt="LinkedIn" width="50" height="40"></a>
+                        <a href="https://www.hackerrank.com/" title="hackerrank"><img src="images/hack.webp" alt="hackerrank" width="50" height="40"></a>
+                        <a href="https://www.facebook.com/" title="facebook"><img src="images/face.webp" alt="Gmail" width="50" height="40"></a>
+                    </div>
+                    <a href="images/CV_2023093022044247.pdf" download class="btn btn2" >Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                       <textarea name="Message" rows="7" placeholder="your Message" required></textarea>
+                       <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+           <p>Thanks for viewing my Blog,Hope You Liked it..✌</p> 
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-content");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>    
+</body>
+</html>
